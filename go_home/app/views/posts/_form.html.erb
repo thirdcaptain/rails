@@ -1,0 +1,15 @@
+<%= form_for @post do |f| %>
+	<%= f.label :date %><br />
+	<%= f.text_field :date %><br />
+	<br />
+	<%= f.label :time %><br />
+	<%= f.text_field :time %><br />
+	<br />
+	<%= f.label :diff %><br />
+	<%= f.text_field :diff %><br />
+	<br />
+	<%= f.label :notes %><br />
+	<%= f.text_field :notes %><br />
+	<br />
+	<%= f.submit %>
+<% end %>

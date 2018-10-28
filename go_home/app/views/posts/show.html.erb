@@ -1,0 +1,19 @@
+<h1>Entry ID: <%= @post.id %></h1>
+<div>
+	<p>
+		post date: <%= @post.date %><br />
+	</p>
+	<p>	
+		post time: <%= @post.time %><br />
+	</p>
+	<p>	
+		post diff: <%= @post.diff %> minute(s)<br />
+	</p>
+	<p>	
+		post notes: <%= @post.notes %><br />
+	</p>
+	<p>	
+		<%= link_to "Edit   ", edit_post_path(@post) %> 
+		<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
+	</p>
+</div>

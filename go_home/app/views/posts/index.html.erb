@@ -1,0 +1,20 @@
+<table border="1">
+	<tr>
+		<th>Entry ID</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Diff (min)</th>
+		<th>Notes</th>
+		<th>Actions</th>
+	</tr>
+	<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.id %></td>
+		<td><%= post.date %></td>
+		<td><%= post.time %></td>
+		<td><%= truncate(post.diff, :length => 3) %></td>
+		<td><%= truncate(post.notes, :length => 35) %></td>
+		<td><%= link_to "Expand", post %></td>
+	</tr>
+	<% end %>
+</table>
