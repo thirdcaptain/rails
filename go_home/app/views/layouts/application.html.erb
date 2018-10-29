@@ -37,7 +37,7 @@
     function goToHome() {
         let today = new Date();
         let y = today.getFullYear();
-        let mon = today.getMonth();
+        let mon = today.getMonth() + 1;
         let d = today.getDate();
         let h = today.getHours();
         let m = today.getMinutes();
@@ -71,9 +71,10 @@
 
     <%= render 'form' %>
   
-    <p id="demo">cow</p>
+
     <%#TEST CODE %>
     <!--
+    <p id="demo">cow</p>
     <p id="bed">not bed</p>
     -->  
   </body>
