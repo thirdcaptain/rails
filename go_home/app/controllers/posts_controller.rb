@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update]
   def index
   	@posts = Post.all.order("created_at DESC")
+  	@post = Post.new
   end
 
   def new
@@ -11,9 +12,10 @@ class PostsController < ApplicationController
   def create
   	@post = Post.new(post_params)
   	if @post.save
-  		redirect_to @post
+  		#redirect_to @post
+  		redirect_to root_path
 	else
-  		render 'new'
+  		render 'index'
 	end		
   end
 
@@ -25,7 +27,8 @@ class PostsController < ApplicationController
 
   def update
   	if @post.update(post_params)
-  		redirect_to @post
+  		#redirect_to @post
+  		redirect_to root_path
 	else
 		render 'edit'
 	end
