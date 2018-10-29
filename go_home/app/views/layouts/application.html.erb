@@ -10,7 +10,7 @@
 
     <script language="javascript" type="text/javascript">
     function startTime() {
-        //let text = 'moose';
+        let text = 'moose';
         let today = new Date();
         let h = today.getHours();
         let m = today.getMinutes();
@@ -20,14 +20,14 @@
         document.getElementById('clock').innerHTML =
         h + ":" + m + ":" + s;
         let t = setTimeout(startTime, 500);
-        /*        
-        if (s % 2 == 0) {
+       
+        if (h >= 22 && m >= 43) {
            document.getElementById("demo").innerHTML = text;
         }
         else {
             document.getElementById("demo").innerHTML = 'cow';
         }
-        */
+
     }
     function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -44,11 +44,12 @@
         let s = today.getSeconds();
         //document.getElementById("bed").innerHTML = "In Bed";
         document.getElementById('post_date').value= y + "-" + mon + "-" + d;
-        document.getElementById('post_time').value=h + ":" + m;
-        document.getElementById('post_diff').value=m;
+        document.getElementById('post_time').value= h + ":" + m;
+        document.getElementById('post_diff').value= m;
         document.getElementById('post_notes').value="Form submitted action";
         document.forms[0].submit();
     }
+
     </script>
   </head>
 
@@ -70,9 +71,9 @@
 
     <%= render 'form' %>
   
+    <p id="demo">cow</p>
     <%#TEST CODE %>
     <!--
-    <p id="demo">cow</p>
     <p id="bed">not bed</p>
     -->  
   </body>
