@@ -7,14 +7,44 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script language="javascript" type="text/javascript">
+    function startTime() {
+        let text = 'moose';
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+        if (s % 2 == 0) {
+           document.getElementById("demo").innerHTML = text;
+        }
+        else {
+            document.getElementById("demo").innerHTML = 'cow';
+        }
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    </script>
   </head>
 
-  <body>
+<body onload="startTime()">
+
+    <div id="txt"></div>
+
+    <p id="demo">cow</p>
 
     <%= link_to "Home", root_path %>
+    <%#= link_to "New Entry", new_post_path %>
 
     <%= yield %>
   
-    <%= link_to "New Entry", new_post_path %>
+
   </body>
 </html>

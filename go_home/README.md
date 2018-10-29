@@ -1,6 +1,6 @@
 # Go Home!
 
-## A Ruby on Rails application made for Holberton School internship application
+## A Ruby on Rails app made for Holberton School internship application
 
 ### Background
 
@@ -10,7 +10,9 @@ This application was a form of nostalgia, to honor a moment from those days.
 
 ### Usage
 This application is not yet ready to be deployed, but to test it locally, clone the repository on your machine, and if you have rails installed, run:  
+```
 >> rails server
+```
 The application should now be served at:
 http://localhost:3000/
 
