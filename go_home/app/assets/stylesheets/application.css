@@ -22,3 +22,14 @@ body {
 td, th {
 	background-color: #ffffff;
 }
+
+#hometime {
+	font-size: 22px;
+}
+
+#clock {
+	font-size: 36px;
+}
+
+#demo {
+}

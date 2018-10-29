@@ -10,41 +10,70 @@
 
     <script language="javascript" type="text/javascript">
     function startTime() {
-        let text = 'moose';
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
+        //let text = 'moose';
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('txt').innerHTML =
+        document.getElementById('clock').innerHTML =
         h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 500);
+        let t = setTimeout(startTime, 500);
+        /*        
         if (s % 2 == 0) {
            document.getElementById("demo").innerHTML = text;
         }
         else {
             document.getElementById("demo").innerHTML = 'cow';
         }
+        */
     }
     function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
     }
+
+    function goToHome() {
+        let today = new Date();
+        let y = today.getFullYear();
+        let mon = today.getMonth();
+        let d = today.getDate();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        //document.getElementById("bed").innerHTML = "In Bed";
+        document.getElementById('post_date').value= y + "-" + mon + "-" + d;
+        document.getElementById('post_time').value=h + ":" + m;
+        document.getElementById('post_diff').value=m;
+        document.getElementById('post_notes').value="Form submitted action";
+        document.forms[0].submit();
+    }
     </script>
   </head>
 
 <body onload="startTime()">
-
-    <div id="txt"></div>
-
-    <p id="demo">cow</p>
-
-    <%= link_to "Home", root_path %>
+    <p><%= link_to "Home", root_path %></p>
     <%#= link_to "New Entry", new_post_path %>
 
-    <%= yield %>
-  
+    Need to go home at:
+    <p id="hometime">23:00</p>
 
+    <p id="alarm"></p>
+
+    The current time is:
+    <p id="clock"></p>
+
+    <p><button onclick="goToHome()">Going Home Now!</button></p>
+
+    <%= yield %>
+
+    <%= render 'form' %>
+  
+    <%#TEST CODE %>
+    <!--
+    <p id="demo">cow</p>
+    <p id="bed">not bed</p>
+    -->  
   </body>
 </html>
