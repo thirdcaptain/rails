@@ -7,7 +7,7 @@
 During the first months at Holberton, I was privileged to meet batchmate Victor Nguyen, whose support I would come to cherish during the first 9-months. I wasn't very good about maintaining good sleep habits, and so Victor would often, dilligently, and consistently prescribe to me that I should "Go Home!" to rest.
 
 ### Usage
-This application is not yet ready to be deployed, but to test it locally, clone the repository on your machine, and if you have rails installed, run:  
+This application is not yet ready to be deployed, but to test it locally, clone the repository on your machine, cd into the go_home/ directory and if you have rails installed, run:  
 ```
 >> rails server
 ```
