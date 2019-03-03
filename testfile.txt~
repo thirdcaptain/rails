@@ -1,0 +1,7 @@
+this is first line
+<<<<<<< HEAD
+this is the second line
+this is the third line
+this is the fourth line
+=======
+>>>>>>> parent of 2337cc2... second line added
