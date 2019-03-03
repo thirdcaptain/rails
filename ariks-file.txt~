@@ -1,8 +1,9 @@
 This is a local edit
 
+<<<<<<< HEAD
 This is a edit made remotely
 
 This is an older version
-
+=======
 This is a edit made remotely, cause conflict
-
+>>>>>>> e207a65e6ce3ba3bf27ad277bb9248b85057b1ce
