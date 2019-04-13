@@ -1,0 +1,7 @@
+<h3>Edit a Cat</h3>
+<%= form_for @cat do |f| %>
+  <p>Cat Name: <%= f.text_field :name %></p>
+  <p>Cat Description: <%= f.text_field :description %></p>
+
+  <%= f.submit %>
+<% end %>
